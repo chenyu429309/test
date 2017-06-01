@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 这里的namespace是xml对应的接口 -->
+<mapper namespace="com.felix.Mapper.UserMapper">
+	<select id="findByUsername" parameterType="string" resultType="user">
+		select * from sys_users where 1=1 and  username=#{userName}
+	</select>
+</mapper>
